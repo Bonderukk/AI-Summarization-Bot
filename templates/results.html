@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 900px;
+        }
+        .result-card {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 0.3rem;
+            padding: 15px;
+            background-color: #fff;
+        }
+        .result-card h2 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+        .result-card p {
+            font-size: 1rem;
+            color: #333;
+        }
+        .footer {
+            margin-top: 30px;
+            padding: 10px;
+            text-align: center;
+        }
+        .back-link {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-4">Results for "{{ keyword }}"</h1>
+        <a href="/" class="btn btn-outline-primary back-link">Back to search</a>
+        {% if results %}
+            <div class="list-group">
+                {% for result in results %}
+                    <div class="result-card">
+                        <h2><a href="{{ result.url }}" target="_blank">{{ result.title }}</a></h2>
+                        <p>{{ result.summary }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No results found for "{{ keyword }}".</p>
+        {% endif %}
+        <div class="footer">
+            <small>&copy; 2024 Article Search App</small>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.10/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

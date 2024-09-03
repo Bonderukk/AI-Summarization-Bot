@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Search</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .jumbotron {
+            background-color: #007bff;
+            color: #fff;
+            padding: 2rem;
+            border-radius: 0.3rem;
+        }
+        .form-control {
+            border-radius: 0.3rem;
+        }
+        .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+        .footer {
+            margin-top: 30px;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Search for Articles</h1>
+            <p class="lead">Find the latest articles on The Hacker News based on your keyword.</p>
+        </div>
+        <form method="post" action="/">
+            <div class="form-group">
+                <label for="keyword">Keyword:</label>
+                <input type="text" id="keyword" name="keyword" class="form-control" placeholder="Enter keyword" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Search</button>
+        </form>
+        <div class="footer">
+            <small>&copy; 2024 Article Search App</small>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.10/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
