@@ -75,5 +75,5 @@ if __name__ == "__main__":
         print(f"URL: {link}\n")
         print("Summary:\n")
         print(result)
-        print("\n" + "=" * 80 + "\nswag")
+        print("\n" + "=" * 80 + "\n")
 
